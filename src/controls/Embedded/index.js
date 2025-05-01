@@ -59,9 +59,9 @@ class Embedded extends Component {
 
     if (blockUnsafeURI) {
       try {
-        if (!["http:", "https:"].includes(new URL(url).protocol)) return this.doCollapse();
+        if (!["http:", "https:"].includes(new URL(url).protocol)) return;
       } catch(_) {
-        return this.doCollapse();
+        return;
       }
     }
     

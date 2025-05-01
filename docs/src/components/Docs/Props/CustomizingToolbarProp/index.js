@@ -182,6 +182,13 @@ export default () => (
         </span>
       </li>
       <li>
+        <b>embedded: blockUnsafeURI</b>
+        <span>
+          : Validates that URIs entered are both HTTP or HTTPS URIs.
+          WARNING: Disabling this also allows `javascript:` URIs to be loaded, which poses a self-XSS risk.
+        </span>
+      </li>
+      <li>
         <b>image: urlEnabled</b>
         <span>
           : The property can be used to configure if the option to specify image

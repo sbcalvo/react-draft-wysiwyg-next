@@ -104,6 +104,7 @@ export default "{\n" +
   "    component: undefined,\n" +
   "    popupClassName: undefined,\n" +
   "    embedCallback: undefined,\n" +
+  "    blockUnsafeURI: true,\n" +
   "    defaultSize: {\n" +
   "      height: 'auto',\n" +
   "      width: 'auto',\n" +

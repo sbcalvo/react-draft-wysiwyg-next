@@ -327,6 +327,7 @@ export default {
     component: undefined,
     popupClassName: undefined,
     embedCallback: undefined,
+    blockUnsafeURI: true,
     defaultSize: {
       height: "auto",
       width: "auto"

@@ -1,5 +1,8 @@
-# React Draft Wysiwyg
+# React Draft Wysiwyg Next
+A continuation fork of the popular but unmaintained `react-draft-wysiwyg`, which is vulnerable to a self-XSS attack.
+This fork aims to provide maintenance updates such as vulnerability fixes, version bumps as well as some quality of life updates such as minor UI tweaks or feature improvements. This fork will attempt to be backwards-compatible with the current `react-draft-wysiwyg` where possible.
 
+# Original README
 A Wysiwyg editor built using ReactJS and DraftJS libraries.
 [Demo Page](https://jpuri.github.io/react-draft-wysiwyg).
 

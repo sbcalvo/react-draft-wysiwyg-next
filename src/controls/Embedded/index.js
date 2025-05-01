@@ -54,8 +54,17 @@ class Embedded extends Component {
     const {
       editorState,
       onChange,
-      config: { embedCallback },
+      config: { embedCallback, blockUnsafeURI },
     } = this.props;
+
+    if (blockUnsafeURI) {
+      try {
+        if (!["http:", "https:"].includes(new URL(url).protocol)) return;
+      } catch(_) {
+        return;
+      }
+    }
+    
     const src = embedCallback ? embedCallback(embeddedLink) : embeddedLink;
     const entityKey = editorState
       .getCurrentContent()

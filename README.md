@@ -2,17 +2,13 @@
 A continuation fork of the popular but unmaintained `react-draft-wysiwyg`, which is vulnerable to a self-XSS attack.
 This fork aims to provide maintenance updates such as vulnerability fixes, version bumps as well as some quality of life updates such as minor UI tweaks or feature improvements. This fork will attempt to be backwards-compatible with the current `react-draft-wysiwyg` where possible.
 
-# Original README
+# (Mostly) Original README
 A Wysiwyg editor built using ReactJS and DraftJS libraries.
 [Demo Page](https://jpuri.github.io/react-draft-wysiwyg).
 
 [![Build Status](https://travis-ci.org/jpuri/react-draft-wysiwyg.svg?branch=master)](https://travis-ci.org/jpuri/react-draft-wysiwyg)
 
 ![](http://i.imgur.com/tU7kJ6i.gif)
-
-## React Draft Wysiwyg AI Bot
-
-[React Draft Wysiwyg](https://codeparrot.ai/oracle?owner=jpuri&repo=react-draft-wysiwyg) Bot will help you understand this repository better. You can ask for code examples, installation guide, debugging help and much more.
 
 ## Features
 
@@ -46,10 +42,10 @@ A Wysiwyg editor built using ReactJS and DraftJS libraries.
 
 ## Installing
 
-The package can be installed from npm `react-draft-wysiwyg`
+The package can be installed from npm `react-draft-wysiwyg-next`
 
 ```
-$ npm install --save react-draft-wysiwyg draft-js
+$ npm install --save react-draft-wysiwyg-next draft-js
 ```
 
 ## Getting started
@@ -57,8 +53,8 @@ $ npm install --save react-draft-wysiwyg draft-js
 Editor can be used as simple React Component:
 
 ```js
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { Editor } from "react-draft-wysiwyg-next";
+import "react-draft-wysiwyg-next/dist/react-draft-wysiwyg.css";
 <Editor
   editorState={editorState}
   toolbarClassName="toolbarClassName"
@@ -71,14 +67,6 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 ## Docs
 
 For more documentation check [here](https://jpuri.github.io/react-draft-wysiwyg/#/docs?_k=jjqinp).
-
-## Questions Discussions
-
-For discussions join public channel #rd_wysiwyg in [DraftJS Slack Organization](https://draftjs.herokuapp.com/).
-
-## Fund
-
-You can fund project at [Patreon](https://www.patreon.com/jyotipuri).
 
 ## Thanks
 

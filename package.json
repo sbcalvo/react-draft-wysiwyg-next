@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/SpeedyCraftah/react-draft-wysiwyg-next.git"
   },
-  "author": "Jyoti Puri",
+  "author": "Jacek",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/plugin-proposal-class-properties": "^7.18.6",

@@ -59,7 +59,7 @@ class Embedded extends Component {
 
     if (blockUnsafeURI) {
       try {
-        if (!["http:", "https:"].includes(new URL(url).protocol)) return;
+        if (!["http:", "https:"].includes(new URL(embeddedLink).protocol)) return;
       } catch(_) {
         return;
       }

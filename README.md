@@ -4,7 +4,7 @@ This fork aims to provide maintenance updates such as vulnerability fixes, versi
 
 # (Mostly) Original README
 A Wysiwyg editor built using ReactJS and DraftJS libraries.
-[Demo Page](https://jpuri.github.io/react-draft-wysiwyg).
+[Demo Page](https://jpuri.github.io/react-draft-wysiwyg) (do note this is the original so this demo won't have the newer features and fixes available here).
 
 [![Build Status](https://travis-ci.org/jpuri/react-draft-wysiwyg.svg?branch=master)](https://travis-ci.org/jpuri/react-draft-wysiwyg)
 

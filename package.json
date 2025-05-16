@@ -3,6 +3,7 @@
   "version": "1.16.0",
   "description": "A maintained fork of react-draft-wysiwyg.",
   "main": "dist/react-draft-wysiwyg.js",
+  "types": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/SpeedyCraftah/react-draft-wysiwyg-next.git"

@@ -1,6 +1,6 @@
 {
   "name": "react-draft-wysiwyg-next",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "A maintained fork of react-draft-wysiwyg.",
   "main": "dist/react-draft-wysiwyg.js",
   "types": "types/index.d.ts",

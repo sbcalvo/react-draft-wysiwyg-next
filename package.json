@@ -1,12 +1,12 @@
 {
   "name": "react-draft-wysiwyg-next",
-  "version": "1.17.2",
+  "version": "1.17.3",
   "description": "A maintained fork of react-draft-wysiwyg.",
   "main": "dist/react-draft-wysiwyg.js",
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SpeedyCraftah/react-draft-wysiwyg-next.git"
+    "url": "git+https://github.com/sbcalvo/react-draft-wysiwyg-next.git"
   },
   "author": "Jacek",
   "devDependencies": {

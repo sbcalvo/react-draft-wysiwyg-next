@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { EditorState, Modifier } from 'draft-js';
-import { getSelectionCustomInlineStyle } from 'draftjs-utils';
+import { EditorState, Modifier } from "draft-js";
+import { getSelectionCustomInlineStyle } from "draftjs-utils";
+import PropTypes from "prop-types";
+import { Component } from "react";
 
-import { forEach } from '../../utils/common';
-import LayoutComponent from './Component';
+import { forEach } from "../../utils/common";
+import LayoutComponent from "./Component";
 
 export default class Remove extends Component {
   static propTypes = {
@@ -45,17 +45,17 @@ export default class Remove extends Component {
     onChange(this.removeAllInlineStyles(editorState));
   };
 
-  removeAllInlineStyles = editorState => {
+  removeAllInlineStyles = (editorState) => {
     let contentState = editorState.getCurrentContent();
     [
-      'BOLD',
-      'ITALIC',
-      'UNDERLINE',
-      'STRIKETHROUGH',
-      'MONOSPACE',
-      'SUPERSCRIPT',
-      'SUBSCRIPT',
-    ].forEach(style => {
+      "BOLD",
+      "ITALIC",
+      "UNDERLINE",
+      "STRIKETHROUGH",
+      "MONOSPACE",
+      "SUPERSCRIPT",
+      "SUBSCRIPT",
+    ].forEach((style) => {
       contentState = Modifier.removeInlineStyle(
         contentState,
         editorState.getSelection(),
@@ -63,10 +63,10 @@ export default class Remove extends Component {
       );
     });
     const customStyles = getSelectionCustomInlineStyle(editorState, [
-      'FONTSIZE',
-      'FONTFAMILY',
-      'COLOR',
-      'BGCOLOR',
+      "FONTSIZE",
+      "FONTFAMILY",
+      "COLOR",
+      "BGCOLOR",
     ]);
     forEach(customStyles, (key, value) => {
       if (value) {
@@ -78,7 +78,7 @@ export default class Remove extends Component {
       }
     });
 
-    return EditorState.push(editorState, contentState, 'change-inline-style');
+    return EditorState.push(editorState, contentState, "change-inline-style");
   };
 
   doExpand = () => {

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {
-  toggleCustomInlineStyle,
   getSelectionCustomInlineStyle,
-} from 'draftjs-utils';
+  toggleCustomInlineStyle,
+} from "draftjs-utils";
+import PropTypes from "prop-types";
+import { Component } from "react";
 
-import LayoutComponent from './Component';
+import LayoutComponent from "./Component";
 
 class ColorPicker extends Component {
   static propTypes = {
@@ -24,7 +24,7 @@ class ColorPicker extends Component {
 
   constructor(props) {
     super(props);
-    const { editorState, modalHandler } = props;
+    const { editorState } = props;
     const state = {
       expanded: false,
       currentColor: undefined,
@@ -32,13 +32,17 @@ class ColorPicker extends Component {
     };
     if (editorState) {
       state.currentColor = getSelectionCustomInlineStyle(editorState, [
-        'COLOR',
+        "COLOR",
       ]).COLOR;
       state.currentBgColor = getSelectionCustomInlineStyle(editorState, [
-        'BGCOLOR',
+        "BGCOLOR",
       ]).BGCOLOR;
     }
     this.state = state;
+  }
+
+  componentDidMount() {
+    const { modalHandler } = this.props;
     modalHandler.registerCallBack(this.expandCollapse);
   }
 
@@ -46,9 +50,9 @@ class ColorPicker extends Component {
     const { editorState } = this.props;
     if (editorState && editorState !== prevProps.editorState) {
       this.setState({
-        currentColor: getSelectionCustomInlineStyle(editorState, ['COLOR'])
+        currentColor: getSelectionCustomInlineStyle(editorState, ["COLOR"])
           .COLOR,
-        currentBgColor: getSelectionCustomInlineStyle(editorState, ['BGCOLOR'])
+        currentBgColor: getSelectionCustomInlineStyle(editorState, ["BGCOLOR"])
           .BGCOLOR,
       });
     }
@@ -95,8 +99,8 @@ class ColorPicker extends Component {
     const { config, translations } = this.props;
     const { currentColor, currentBgColor, expanded } = this.state;
     const ColorPickerComponent = config.component || LayoutComponent;
-    const color = currentColor && currentColor.substring(6);
-    const bgColor = currentBgColor && currentBgColor.substring(8);
+    const color = currentColor?.substring(6);
+    const bgColor = currentBgColor?.substring(8);
     return (
       <ColorPickerComponent
         config={config}

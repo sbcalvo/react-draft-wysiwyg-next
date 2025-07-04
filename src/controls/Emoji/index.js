@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Modifier, EditorState } from 'draft-js';
+import { EditorState, Modifier } from "draft-js";
+import PropTypes from "prop-types";
+import { Component } from "react";
 
-import LayoutComponent from './Component';
+import LayoutComponent from "./Component";
 
 export default class Emoji extends Component {
   static propTypes = {
@@ -50,7 +50,7 @@ export default class Emoji extends Component {
     });
   };
 
-  addEmoji = emoji => {
+  addEmoji = (emoji) => {
     const { editorState, onChange } = this.props;
     const contentState = Modifier.replaceText(
       editorState.getCurrentContent(),
@@ -58,7 +58,7 @@ export default class Emoji extends Component {
       emoji,
       editorState.getCurrentInlineStyle()
     );
-    onChange(EditorState.push(editorState, contentState, 'insert-characters'));
+    onChange(EditorState.push(editorState, contentState, "insert-characters"));
     this.doCollapse();
   };
 

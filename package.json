@@ -1,6 +1,6 @@
 {
   "name": "react-draft-wysiwyg-next",
-  "version": "1.17.3",
+  "version": "1.17.4",
   "description": "A maintained fork of react-draft-wysiwyg.",
   "main": "dist/react-draft-wysiwyg.js",
   "types": "types/index.d.ts",
@@ -99,5 +99,8 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

@@ -13,11 +13,18 @@ export default class Emoji extends Component {
     translations: PropTypes.object,
   };
 
+  // Campos de instancia, no causan re-render
+  signalExpanded = false;
+  didMount = false;
+
   state = {
     expanded: false,
   };
 
   componentDidMount() {
+    if (this.didMount) return;
+
+    this.didMount = true;
     const { modalHandler } = this.props;
     modalHandler.registerCallBack(this.expandCollapse);
   }
@@ -39,15 +46,13 @@ export default class Emoji extends Component {
   };
 
   doExpand = () => {
-    this.setState({
-      expanded: true,
-    });
+    const newState = { ...this.state, expanded: true };
+    this.setState(newState);
   };
 
   doCollapse = () => {
-    this.setState({
-      expanded: false,
-    });
+    const newState = { ...this.state, expanded: false };
+    this.setState(newState);
   };
 
   addEmoji = (emoji) => {
@@ -75,7 +80,6 @@ export default class Emoji extends Component {
         onExpandEvent={this.onExpandEvent}
         doExpand={this.doExpand}
         doCollapse={this.doCollapse}
-        onCollpase={this.closeModal}
       />
     );
   }

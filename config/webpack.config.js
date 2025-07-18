@@ -40,6 +40,9 @@ module.exports = {
         postcss: [autoprefixer, precss],
       },
     }),
+    new webpack.ProvidePlugin({
+      "React": "react",
+   }),
   ],
   module: {
     rules: [

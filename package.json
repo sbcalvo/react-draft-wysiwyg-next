@@ -1,12 +1,12 @@
 {
   "name": "@sbcalvo/react-draft-wysiwyg-next",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A maintained fork of react-draft-wysiwyg.",
   "main": "dist/react-draft-wysiwyg.js",
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sbcalvo/react-draft-wysiwyg-next.git"
+    "url": "https://github.com/sbcalvo/react-draft-wysiwyg-next.git"
   },
   "author": "Jacek",
   "devDependencies": {
@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@babel/register": "^7.22.5",
+    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "@storybook/addon-essentials": "^7.0.20",
     "@storybook/addon-interactions": "^7.0.20",
     "@storybook/addon-links": "^7.0.20",
@@ -23,7 +24,6 @@
     "@storybook/react": "^7.0.20",
     "@storybook/react-webpack5": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "autoprefixer": "^10.4.14",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
@@ -36,7 +36,6 @@
     "draftjs-to-markdown": "^0.6.0",
     "embed-video": "^2.0.4",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.7",
     "eslint": "^8.42.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",

@@ -18,4 +18,6 @@ postcss.config.js
 .npmignore
 yarn.lock
 CHANGELOG.md
-dist/**/*.map
+dist/**/*js.map
+.nvmrc
+dist/**/*.txt

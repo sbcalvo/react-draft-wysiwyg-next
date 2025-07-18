@@ -50,11 +50,14 @@ export default class ModalHandler {
   };
 
   registerCallBack = (callBack): void => {
-    this.callBacks.push(callBack);
+    const newCallBacks = this.callBacks.slice(); // Clone the array
+    newCallBacks.push(callBack);
+    this.callBacks = newCallBacks;
   };
 
   deregisterCallBack = (callBack): void => {
-    this.callBacks = this.callBacks.filter(cb => cb !== callBack);
+    const newCallBacks = this.callBacks.filter(cb => cb !== callBack);
+    this.callBacks = newCallBacks;
   };
 
   setSuggestionCallback = (callBack): void => {
